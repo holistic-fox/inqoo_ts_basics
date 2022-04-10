@@ -43,7 +43,7 @@ interface myObjectInterface {
 }
 
 let myObject01: myObjectInterface = {
-    myPropA :'AA',
+    myPropA: 'AA',
     myProbB: 'BB',
     myPropC: 8
 }
@@ -78,8 +78,55 @@ console.log('goUp', goUp)
 
 //Enum string
 
-enum Colors{
-    black ='#000000',
-    red = '#be1825'
+enum Colors {
+    black = '#000000',
+    red = '#be1825',
+    blue = '#0c5682'
 }
 
+const black = Colors.black;
+console.log('black', black);
+
+//FUNCTIONS
+
+function iDoNothing(): void{
+    // return 'x';
+}
+
+function iReturnString(): string {
+    return 'Im a string';
+}
+
+function iReturnMyInput(input: boolean): boolean{
+    return input;
+}
+
+function iReturnMyInputDefault(input: boolean = true): boolean{
+    return input;
+}
+iReturnMyInput(false);
+iReturnMyInputDefault();
+iReturnMyInputDefault(false);
+
+function myInputParams(a: string, b: number, c: boolean, o: number = 9)
+    : [string, number, boolean, number]{
+    return [a, b, c, o];
+}
+
+function myInputParams02(a: string, b?: number): [string, number]{
+    return [a, b];
+}
+
+console.log('myInputParams02 only a', myInputParams02('a'))
+console.log('myInputParams02 a and b', myInputParams02('a', 7))
+
+
+function myIObject(object: myObjectInterface): myObjectInterface{
+    return object;
+}
+
+myIObject({myPropA: 'a', myProbB: 'b', myPropC: 7});
+myIObject({myPropA: 'a', myProbB: 'b', myPropC: 7, myPropO: true});
+
+myInputParams('im a string', 7, true);
+myInputParams('im a string', 7, true, 0);
