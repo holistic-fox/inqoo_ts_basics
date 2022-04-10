@@ -1,6 +1,6 @@
-import { IPeople } from '../interfaces/IPeople';
+import { IPerson } from '../interfaces/IPerson';
 
-export const people: IPeople[] = [
+export const people: IPerson[] = [
     {
         name: 'Luke Skywalker',
         height: '172',
