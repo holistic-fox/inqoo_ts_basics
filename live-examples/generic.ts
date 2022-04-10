@@ -4,7 +4,7 @@ import { starships } from  './sample_data/starships';
 const random = () => Math.floor(Math.random()*10000);
 
 const generateIdsForArrayElems = <T>(array: T[]): (T & {id: number})[] => {
-    return array.map(item => ({id: random(), ...item}));
+    return array.map((item ) => ({id: random(), ...item}));
 }
 
 console.log(generateIdsForArrayElems(people));
