@@ -1,4 +1,6 @@
-const starships = [
+import { IStarships } from '../interfaces/IStarships';
+
+export const starships: IStarships[] = [
     {
         name: 'CR90 corvette',
         model: 'CR90 corvette',
